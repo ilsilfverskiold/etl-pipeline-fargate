@@ -1,0 +1,26 @@
+{
+    "family": "my-etl-task",
+    "taskRoleArn": "arn:aws:iam::ACCOUNT_ID:role/etl-pipeline-task-role",
+    "executionRoleArn": "arn:aws:iam::ACCOUNT_ID:role/etl-pipeline-execution-role",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "name": "my-etl-container",
+            "image": "ACCOUNT_ID.dkr.ecr.REGION.amazonaws.com/bigquery-etl-pipeline:latest", 
+            "cpu": 256,
+            "memory": 512,
+            "essential": true,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/etl-pipeline-logs",
+                    "awslogs-region": "REGION",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ],
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "256",
+    "memory": "512"
+}
