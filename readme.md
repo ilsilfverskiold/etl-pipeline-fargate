@@ -2,7 +2,7 @@
 
 This repository contains a template for setting up a serverless long-running ETL pipeline that extracts data from Google BigQuery, transforms it, and loads it back. This README guides you through setting up and deploying the ETL pipeline on AWS ECS with AWS Fargate.
 
-Follow the tutorial here if you need help setting this up. 
+Follow the tutorial [here](https://medium.com/towards-data-science/deploy-long-running-etl-pipelines-to-ecs-with-fargate-01ab19c6d2a8) if you need help setting this up. 
 
 ## Prerequisites
 
